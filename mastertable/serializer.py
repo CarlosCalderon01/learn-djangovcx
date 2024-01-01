@@ -1,35 +1,84 @@
+# PACKAGES & LIBRARIES - THIRD
 from rest_framework import serializers
-from .models import Task
+# PACKAGES & LIBRARIES - LOCAL
+from .models import *
+
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section X - Task --> Temp
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = '__all__'
 
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section 1 - Country, State, City, Neighborhood --> location
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+
+class GmtCountrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtCountry
+        fields = '__all__'
+
+class GmtStateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtState
+        fields = '__all__'
+
+class GmtCitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtCity
+        fields = '__all__'
+
+class GmtNeighborhoodSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtNeighborhood
+        fields = '__all__'
+
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section 2 - Language --> Language
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+
+class GmtLanguageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtLanguage
+        fields = '__all__'
+
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section 3 - GenderV01, GenderVX --> Genders
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+
+class GmtGenderV01Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtGenderV01
+        fields = '__all__'
+
+class GmtGenderVXSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtGenderVX
+        fields = '__all__'
+
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section 4 - HoliDay --> Days
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+        
+class GmtHolidaySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GmtHoliday
+        fields = '__all__'
+
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+# Section X - X --> X
+# // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
+
 # // ----- // ----- // ----- // Notes // ----- // ----- // ----- //
         
 # // ----- // ----- // ----- // References // ----- // ----- // ----- //
 
-# puedes relacionar tablas en un serializer
-    # Libreria --> from rest_framework import serializer
-        # serializers.<FieldName>
-
-    # fields --> specify keyword from model, 1 by 1.
-        # fields = ['id', 'alfa2', 'alfa3', 'phone', 'num']
-
-    # read_only_fields --> only allows read, do not edit.
-        # read_only_fields = ['alfa2']
-    
-    # extra_kwargs --> only allows read, do not edit.
-    # extra_kwargs = {'password': {'write_only': True}}
-
-    # exclude --> you can exclude arguments use this.
-    # exclude = ['users']
-
 # // ----- // ----- // ----- // Bibliography // ----- // ----- // ----- //
 
 # Serializador --> https://www.django-rest-framework.org/api-guide/serializers/
-# relations --> https://www.django-rest-framework.org/api-guide/relations/
 
 # ForeignKey
 

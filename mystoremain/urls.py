@@ -21,5 +21,5 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('mastertable.urls'))
+    path('mastertable/', include('mastertable.urls'))
 ]

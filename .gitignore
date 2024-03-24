@@ -10,6 +10,7 @@ __pycache__/
 
 # Directorio de archivos estáticos (si usas 'collectstatic')
 staticfiles/
+Temp/
 
 # Directorio de archivos media (si permites la carga de archivos por usuarios)
 media/

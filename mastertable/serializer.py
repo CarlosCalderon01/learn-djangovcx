@@ -7,6 +7,7 @@ from .models import *
 # Section X - Task --> Temp
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
@@ -16,20 +17,24 @@ class TaskSerializer(serializers.ModelSerializer):
 # Section 1 - Country, State, City, Neighborhood --> location
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtCountrySerializer(serializers.ModelSerializer):
     class Meta:
         model = GmtCountry
         fields = '__all__'
+
 
 class GmtStateSerializer(serializers.ModelSerializer):
     class Meta:
         model = GmtState
         fields = '__all__'
 
+
 class GmtCitySerializer(serializers.ModelSerializer):
     class Meta:
         model = GmtCity
         fields = '__all__'
+
 
 class GmtNeighborhoodSerializer(serializers.ModelSerializer):
     class Meta:
@@ -40,6 +45,7 @@ class GmtNeighborhoodSerializer(serializers.ModelSerializer):
 # Section 2 - Language --> Language
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtLanguageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GmtLanguage
@@ -49,10 +55,12 @@ class GmtLanguageSerializer(serializers.ModelSerializer):
 # Section 3 - GenderV01, GenderVX --> Genders
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtGenderV01Serializer(serializers.ModelSerializer):
     class Meta:
         model = GmtGenderV01
         fields = '__all__'
+
 
 class GmtGenderVXSerializer(serializers.ModelSerializer):
     class Meta:
@@ -62,7 +70,8 @@ class GmtGenderVXSerializer(serializers.ModelSerializer):
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 # Section 4 - HoliDay --> Days
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
-        
+
+
 class GmtHolidaySerializer(serializers.ModelSerializer):
     class Meta:
         model = GmtHoliday
@@ -73,12 +82,12 @@ class GmtHolidaySerializer(serializers.ModelSerializer):
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
 # // ----- // ----- // ----- // Notes // ----- // ----- // ----- //
-        
+
 # // ----- // ----- // ----- // References // ----- // ----- // ----- //
 
 # // ----- // ----- // ----- // Bibliography // ----- // ----- // ----- //
 
-# Serializador --> https://www.django-rest-framework.org/api-guide/serializers/
+# Serialized --> https://www.django-rest-framework.org/api-guide/serializers/
 
 # ForeignKey
 

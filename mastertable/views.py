@@ -9,6 +9,7 @@ from .models import *
 # Section X - Task --> Temp
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class TaskView(viewsets.ModelViewSet):
     serializer_class = TaskSerializer
     queryset = Task.objects.all()
@@ -17,17 +18,21 @@ class TaskView(viewsets.ModelViewSet):
 # Section 1 - Country, State, City, Neighborhood --> location
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtCountryView(viewsets.ModelViewSet):
     serializer_class = GmtCountrySerializer
     queryset = GmtCountry.objects.all()
+
 
 class GmtStateView(viewsets.ModelViewSet):
     serializer_class = GmtStateSerializer
     queryset = GmtState.objects.all()
 
+
 class GmtCityView(viewsets.ModelViewSet):
     serializer_class = GmtCitySerializer
     queryset = GmtCity.objects.all()
+
 
 class GmtNeighborhoodView(viewsets.ModelViewSet):
     serializer_class = GmtNeighborhoodSerializer
@@ -37,6 +42,7 @@ class GmtNeighborhoodView(viewsets.ModelViewSet):
 # Section 2 - Language --> Language
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtLanguageView(viewsets.ModelViewSet):
     serializer_class = GmtLanguageSerializer
     queryset = GmtLanguage.objects.all()
@@ -45,9 +51,11 @@ class GmtLanguageView(viewsets.ModelViewSet):
 # Section 3 - GenderV01, GenderVX --> Genders
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
+
 class GmtGenderV01View(viewsets.ModelViewSet):
     serializer_class = GmtGenderV01Serializer
     queryset = GmtGenderV01.objects.all()
+
 
 class GmtGenderVXView(viewsets.ModelViewSet):
     serializer_class = GmtGenderVXSerializer
@@ -56,7 +64,8 @@ class GmtGenderVXView(viewsets.ModelViewSet):
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 # Section 4 - HoliDay --> Days
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
-        
+
+
 class GmtHolidayView(viewsets.ModelViewSet):
     serializer_class = GmtHolidaySerializer
     queryset = GmtHoliday.objects.all()
@@ -66,7 +75,7 @@ class GmtHolidayView(viewsets.ModelViewSet):
 # // ----- // ----- // ----- // ----- // ----- // ----- // ----- //
 
 # // ----- // ----- // ----- // Notes // ----- // ----- // ----- //
-        
+
 # // ----- // ----- // ----- // References // ----- // ----- // ----- //
 
 # // ----- // ----- // ----- // Bibliography // ----- // ----- // ----- //
